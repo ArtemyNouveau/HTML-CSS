@@ -1,0 +1,638 @@
+@font-face {
+  font-family: 'Open Sans Condensed';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Open Sans Condensed Light'), local('OpenSansCondensed-Light'), url('../fonts/open-sans-condensed-v13-cyrillic_latin-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */ url('../fonts/open-sans-condensed-v13-cyrillic_latin-300.woff') format('woff');
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+@font-face {
+  font-family: 'Bebas Neue Bold';
+  src: url('../fonts/bebas_neue_bold.eot');
+  /* IE 9 Compatibility Mode */
+  src: url('../fonts/bebas_neue_bold.eot?#iefix') format('embedded-opentype'), /* IE < 9 */ url('../fonts/bebas_neue_bold.woff2') format('woff2'), /* Super Modern Browsers */ url('../fonts/bebas_neue_bold.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */ url('../fonts/bebas_neue_bold.ttf') format('truetype'), /* Safari, Android, iOS */ url('../fonts/bebas_neue_bold.svg#bebas_neue_bold') format('svg');
+  /* Chrome < 4, Legacy iOS */
+}
+html {
+  width: 100%;
+  min-width: 425px;
+}
+.brand {
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+  font-family: "Bebas Neue Bold", sans-serif;
+  font-weight: 400;
+  margin: 1em;
+}
+.brand h3 {
+  font-size: 30px;
+  line-height: 30px;
+  letter-spacing: 2.75px;
+  margin: 0;
+}
+.brand h2 {
+  font-size: 41px;
+  line-height: 30px;
+  letter-spacing: 2.04px;
+  margin: 0;
+  color: #4e26fd;
+}
+.brand .brand-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 30px;
+}
+header .nav {
+  text-transform: uppercase;
+  letter-spacing: 1.12px;
+  color: #0f0f0f;
+}
+header .showroom {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-auto-rows: 1fr 1fr;
+}
+header .showroom .img-block img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+header .showroom .showroom-container {
+  position: relative;
+  max-width: 570px;
+  padding-left: 3em;
+  margin-right: 0;
+  margin-left: auto;
+}
+@media (max-width: 460px) {
+  header .showroom .showroom-container {
+    padding-left: 15px;
+  }
+}
+header .showroom .card-block {
+  position: relative;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  font-size: larger;
+  text-transform: uppercase;
+}
+header .showroom .card-block img {
+  width: 100%;
+  height: calc(100% - 2.5em);
+  object-fit: cover;
+}
+@media (max-width: 732px) {
+  header .showroom .card-block img {
+    height: calc(100% - 5em);
+  }
+}
+header .showroom .card-block .img-text {
+  color: white;
+  position: absolute;
+  bottom: 1.25em;
+}
+@media (max-width: 732px) {
+  header .showroom .card-block .img-text {
+    bottom: 2.5em;
+  }
+}
+header .showroom .card-block .text {
+  margin: 0;
+}
+@media (max-width: 400px) {
+  header .showroom .card-block {
+    grid-row-start: 2;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+header .booking {
+  margin-top: 60px;
+  padding: 1em;
+  background-color: #1c1c1c;
+  border-bottom: solid #4e26fd 10px;
+}
+header .booking .booking-form {
+  display: grid;
+  grid-column-gap: 1em;
+  grid-row-gap: 1em;
+  grid-template-columns: repeat(5, 1fr);
+}
+header .booking .booking-form .input {
+  position: relative;
+}
+header .booking .booking-form .input:hover .placeholder {
+  top: 100%;
+  display: none;
+  font-family: "Open Sans", sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  letter-spacing: 1.02px;
+}
+header .booking .booking-form input,
+header .booking .booking-form select,
+header .booking .booking-form button {
+  border-radius: 0;
+  border: none;
+}
+header .booking .booking-form .submit-book {
+  letter-spacing: 1.2px;
+  font-weight: 400;
+  background: #4e26fd;
+  color: white;
+  text-transform: uppercase;
+}
+@media (max-width: 992px) {
+  header .booking .booking-form {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  header .booking .booking-form .submit-book {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+header .booking .placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding-left: 1em;
+  padding-top: 0.5em;
+  text-align: left;
+  background-color: white;
+}
+main section {
+  margin-top: 120px;
+}
+main section .grid-wrap {
+  display: grid;
+}
+main section .section-name {
+  text-align: center;
+  margin: 0 auto 1em;
+  font-family: "Bebas Neue Bold", serif;
+  font-size: 80px;
+  font-weight: 400;
+  line-height: 88.73px;
+  text-transform: uppercase;
+  letter-spacing: 1.97px;
+}
+main section .browse-more {
+  text-decoration: none;
+  width: 5em;
+  text-align: center;
+  display: block;
+  padding: 1em;
+  margin: 2em auto;
+  float: none;
+  color: #4e26fd;
+  letter-spacing: 1.44px;
+  font-weight: 400;
+  border-radius: 0;
+  border: 2px solid #4e26fd;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+main section .browse-more:hover {
+  color: white;
+  background-color: #4e26fd;
+  border-color: #4e26fd;
+}
+main section .card {
+  border-radius: 2px;
+}
+main section .card:hover {
+  transition: 0.2s;
+}
+@media (min-width: 1024px) {
+  main section .card:hover {
+    transform: scale(1.01);
+  }
+}
+main .awards .grid-wrap {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 1em;
+  grid-row-gap: 1em;
+}
+main .awards .grid-wrap .card {
+  border: none;
+}
+main .awards .grid-wrap .card .card-img-top {
+  border-radius: 0;
+}
+main .awards .grid-wrap .card .card-body {
+  font-family: "Open Sans", sans-serif;
+}
+main .awards .grid-wrap .card .card-body .card-text {
+  color: #010101;
+  letter-spacing: 0.64px;
+  line-height: 1.1em;
+}
+@media (max-width: 425px) {
+  main .awards .grid-wrap .card {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+@media (max-width: 992px) {
+  main .awards .grid-wrap {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+main .activities .grid-wrap {
+  grid-template-columns: repeat(5, 1fr);
+  background-color: white;
+}
+main .activities .grid-wrap .card {
+  color: white;
+  border: none;
+  border-radius: 0;
+}
+main .activities .grid-wrap .card .card-img {
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+}
+main .activities .grid-wrap .card .card-img-overlay {
+  display: flex;
+  flex-direction: column-reverse;
+}
+main .activities .grid-wrap .card .card-text {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.64px;
+  font-family: "Open Sans Condensed", sans-serif;
+}
+main .activities .grid-wrap .card .card-title {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 55px;
+  text-transform: capitalize;
+  font-family: "Bebas Neue Bold", sans-serif;
+}
+@media (min-width: 769px) {
+  main .activities .grid-wrap {
+    overflow: hidden;
+    background-color: #1c1c1c;
+  }
+}
+@media (max-width: 768px) {
+  main .activities .grid-wrap {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 15px;
+  }
+  main .activities .grid-wrap .card:first-child {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+@media (min-width: 769px) {
+  main .activities .grid-wrap:hover {
+    background-color: white;
+  }
+  main .activities .grid-wrap:hover .card:not(:hover) {
+    animation: slide 40s linear 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+  }
+  main .activities .grid-wrap:not(:hover) .card {
+    animation: popBack 2s;
+    animation-timing-function: ease-in-out;
+  }
+  main .activities .card:hover {
+    animation: none;
+  }
+}
+@keyframes popBack {
+  from {
+    opacity: 0.6;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes slide {
+  from {
+    transform: translate(0, 0);
+  }
+  5% {
+    transform: translate(0, 101%);
+  }
+  to {
+    transform: translate(0, 101%);
+  }
+}
+main .rooms .grid-wrap {
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 1em;
+  grid-row-gap: 1em;
+}
+main .rooms .grid-wrap .card {
+  position: relative;
+  border: none;
+}
+main .rooms .grid-wrap .card .card-img-top {
+  border-radius: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+main .rooms .grid-wrap .card .card-body {
+  font-family: "Open Sans", sans-serif;
+}
+main .rooms .grid-wrap .card .card-body .card-text {
+  color: #010101;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.1em;
+  letter-spacing: 0.64px;
+}
+main .rooms .grid-wrap .card .bookNow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: scale(0, 0);
+  background-color: #4e26fd;
+  transition-delay: 3s;
+  transition: 1s;
+  border-radius: 2px;
+  outline: #010101 3px;
+}
+main .rooms .grid-wrap .card .bookNow a {
+  display: block;
+  letter-spacing: 1.2px;
+  font-weight: 400;
+  background: #4e26fd;
+  text-transform: uppercase;
+  width: 100%;
+  height: 100%;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  padding-top: 50%;
+}
+main .rooms .grid-wrap .card .bookNow a .bookingDescription {
+  padding: 1em;
+  text-transform: lowercase;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.1em;
+  letter-spacing: 0.64px;
+}
+@media (max-width: 768px) {
+  main .rooms .grid-wrap .card {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+main .rooms .grid-wrap .card:active .bookNow {
+  animation: pop 10s ease-in;
+  animation-iteration-count: 1;
+}
+main .rooms .grid-wrap .card:not(:active) .bookNow {
+  transform: scale(0, 0);
+}
+main .rooms .grid-wrap .card:hover .bookNow {
+  animation: pop 10s ease-in;
+  animation-iteration-count: 1;
+}
+main .rooms .grid-wrap .card:not(:hover) .bookNow {
+  transform: scale(0, 0);
+}
+@keyframes pop {
+  from {
+    transform: scale(0, 0) translateY(-50%);
+    opacity: 0;
+  }
+  9% {
+    transform: scale(1, 1) translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: scale(1, 1) translateY(0);
+  }
+}
+main .rooms .grid-wrap .big {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 2;
+  grid-column-end: 4;
+}
+@media (max-width: 992px) {
+  main .rooms .grid-wrap .big {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+@media (max-width: 992px) {
+  main .rooms .grid-wrap {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+main .weather {
+  position: relative;
+  background-color: #1c1c1c;
+}
+main .weather .back {
+  width: 100%;
+  object-fit: cover;
+  mix-blend-mode: difference;
+}
+main .weather .wrap {
+  position: absolute;
+  top: 0;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-left: calc(50% - 80px);
+  margin-right: auto;
+  color: white;
+}
+main .weather .wrap .section-name {
+  margin-top: 0.5em;
+  text-align: left;
+}
+main .weather .wrap .browse-more {
+  margin-left: 0;
+  background-color: #0000ff;
+  border-color: #0000ff;
+}
+main .weather .wrap .browse-more:hover {
+  background-color: #00009C;
+  border-color: #00009C;
+}
+@media (max-width: 1200px) {
+  main .weather .wrap {
+    max-width: 960px;
+    margin-left: calc(50% - 480px);
+  }
+  main .weather .wrap .section-name {
+    margin-bottom: 0.25em;
+    width: 100%;
+  }
+}
+@media (max-width: 992px) {
+  main .weather .wrap {
+    max-width: 500px;
+    margin-left: calc(50% - 250px);
+  }
+  main .weather .wrap .section-name {
+    margin-top: 0;
+    margin-bottom: 0.25em;
+  }
+  main .weather .wrap .text {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  main .weather .wrap {
+    width: 425px;
+    top: -10px;
+    padding: 0;
+    margin-left: calc(50% - 212.5px);
+  }
+  main .weather .wrap .browse-more {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+  }
+  main .weather .wrap .section-name {
+    padding-left: 15px;
+  }
+}
+main .news .grid-wrap {
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 1em;
+  grid-row-gap: 1em;
+}
+main .news .grid-wrap .card {
+  border: none;
+}
+main .news .grid-wrap .card .card-img-top {
+  border-radius: 0;
+  height: 100%;
+  object-fit: cover;
+}
+main .news .grid-wrap .card .card-body {
+  font-family: "Open Sans", sans-serif;
+}
+main .news .grid-wrap .card .card-body .card-text {
+  color: #010101;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.1em;
+  letter-spacing: 0.64px;
+}
+@media (max-width: 768px) {
+  main .news .grid-wrap .card {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+@media (max-width: 992px) {
+  main .news .card:first-child {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  main .news .grid-wrap {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+footer {
+  background-color: #252525;
+  color: white;
+}
+footer .container {
+  border-bottom: solid #303030;
+  padding-bottom: 1em;
+}
+footer .container .flex-wrap {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+}
+footer .container .flex-wrap .brand {
+  display: none;
+}
+footer .container .flex-wrap .contacts {
+  display: flex;
+  margin: 0;
+  flex-direction: column;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 0.84px;
+}
+footer .container .flex-wrap .links {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 1em;
+  grid-row-gap: 1em;
+  grid-auto-flow: column;
+  font-family: "Bebas Neue Bold", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22px;
+  text-transform: uppercase;
+  letter-spacing: 1.26px;
+}
+footer .container .flex-wrap .links .link {
+  text-decoration: none;
+  color: white;
+}
+footer .container .flex-wrap .links .link:hover {
+  color: gray;
+}
+footer .container .flex-wrap .social-links ul {
+  padding-left: 0;
+}
+footer .container .flex-wrap .social-links ul li {
+  display: inline;
+  font-size: larger;
+  margin-right: 0.25em;
+}
+footer .container .flex-wrap .social-links ul li i {
+  padding: 0.5em;
+  outline: solid white;
+}
+@media (min-width: 769px) {
+  footer .container .flex-wrap .social-links ul li i:hover {
+    transform: scale(1.02);
+  }
+}
+footer .container .flex-wrap .social-links .link:hover {
+  color: gray;
+}
+@media (max-width: 768px) {
+  footer .container .flex-wrap {
+    flex-direction: column;
+    align-content: center;
+  }
+  footer .container .flex-wrap .contacts,
+  footer .container .flex-wrap .links,
+  footer .container .flex-wrap .social-links {
+    padding: 1em;
+    border-bottom: solid #303030;
+  }
+}
+footer .copyright {
+  width: 100%;
+  margin-top: 1em;
+  display: inline-block;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  footer .brand {
+    display: none;
+  }
+  footer .container {
+    border: none;
+  }
+}
+a:not([href]):not([tabindex]):hover {
+  color: white;
+}
+/*# sourceMappingURL=home.css.map */
